@@ -38,11 +38,11 @@ const Footer = () => {
                         </div>
                         <div className={styles.contactItem}>
                             <Phone size={18} className={styles.icon} />
-                            <span>+91 98765 43210</span>
+                            <span>+91 74042 72041</span>
                         </div>
                         <div className={styles.contactItem}>
                             <Mail size={18} className={styles.icon} />
-                            <span>info@gstechnologies.com</span>
+                            <span>paialarahul@gmail.com</span>
                         </div>
                     </div>
                 </div>
