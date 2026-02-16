@@ -1,0 +1,7 @@
+- [x] Import useState and useRef from React
+- [x] Add state variables: showOtpModal, generatedOtp, enteredOtp, loading
+- [x] Add formRef using useRef
+- [x] Add name attributes to form inputs
+- [x] Modify handleSubmit to generate and send OTP
+- [x] Add verifyOtpAndSubmit function
+- [x] Add OTP modal JSX

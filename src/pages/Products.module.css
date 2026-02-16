@@ -1,0 +1,47 @@
+.heroImage {
+    position: relative;
+    height: 400px;
+    background-image: url('../assets/images/products-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xl);
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #e0e0e0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}

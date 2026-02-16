@@ -1,0 +1,183 @@
+.aboutPage {
+    background-color: var(--color-bg);
+}
+
+.heroImage {
+    position: relative;
+    height: 400px;
+    background-image: url('../assets/images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xl);
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+/* Override title for Hero */
+.heroContent .title {
+    color: #ffffff !important;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #f3f3f3;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    padding: var(--spacing-xxl) 24px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.description {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+}
+
+/* Revamped Stats Section */
+.statsSection {
+    background: #060b1a;
+    /* Even deeper tech blue */
+    padding: 100px 0;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.statsSection::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+    top: -100px;
+    right: -100px;
+    pointer-events: none;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.statCard:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary-vibrant);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+.statIcon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    color: var(--color-primary-vibrant);
+    transition: all 0.4s ease;
+}
+
+.statCard:hover .statIcon {
+    background: var(--color-primary-vibrant);
+    color: #000;
+    transform: rotate(10deg) scale(1.1);
+}
+
+.statInfo h3 {
+    font-size: 4rem;
+    /* Larger and bolder */
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.statInfo p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .statsSection {
+        padding: 60px 0;
+    }
+
+    .statInfo h3 {
+        font-size: 3rem;
+    }
+
+    .statCard {
+        padding: 40px 20px;
+    }
+}
