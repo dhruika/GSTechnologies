@@ -10,7 +10,7 @@ const GlobalContactSection = () => {
     }
 
     return (
-        <div style={{ backgroundColor: 'var(--color-bg)', paddingBottom: '2rem' }}>
+        <div style={{ backgroundColor: 'var(--color-bg)' }}>
             <ContactForm />
         </div>
     );

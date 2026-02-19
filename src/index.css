@@ -108,18 +108,21 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   /* Explicit padding for small screens */
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 20px !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 .section {
-  padding: var(--spacing-xxl) 0;
+  padding-top: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
 }
 
 .btn {
