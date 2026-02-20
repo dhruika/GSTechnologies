@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Accordion from '../components/Accordion';
 import faqImg from '../assets/images/faq.jpg';
+import styles from './FAQ.module.css';
 
 const faqData = [
     {
@@ -39,30 +40,15 @@ const FAQ = () => {
 
     return (
         <div ref={containerRef}>
-            <div className="heroImage" style={{
-                position: 'relative',
-                height: '300px',
-                backgroundImage: `url(${faqImg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                color: '#fff',
-                marginBottom: '3rem'
-            }}>
-                <div style={{
-                    position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                    background: 'rgba(0,0,0,0.6)'
-                }}></div>
-                <div className="container hero-text" style={{ position: 'relative', zIndex: 1 }}>
-                    <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Frequently Asked Questions</h1>
-                    <p style={{ fontSize: '1.25rem', color: '#e0e0e0' }}>Find answers to common questions about our products and services.</p>
+            <div className={styles.heroImage} style={{ backgroundImage: `url(${faqImg})` }}>
+                <div className={styles.heroOverlay}></div>
+                <div className={`container hero-text ${styles.heroContent}`}>
+                    <h1>Frequently Asked Questions</h1>
+                    <p>Find answers to common questions about our products and services.</p>
                 </div>
             </div>
 
-            <div className="container section accordion-container">
+            <div className={`container section accordion-container ${styles.accordionSection}`}>
                 <Accordion items={faqData} />
             </div>
         </div>

@@ -1,15 +1,14 @@
 .heroImage {
     position: relative;
-    height: 400px;
-    background-image: url('../assets/images/products-hero.png');
+    height: 380px;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--color-white);
-    margin-bottom: var(--spacing-xl);
+    color: #fff;
+    margin-bottom: 3rem;
 }
 
 .heroOverlay {
@@ -28,33 +27,41 @@
     /* Offset for navbar */
 }
 
+.heroContent h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.heroContent p {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordionSection {
+    margin-bottom: 5rem;
+}
+
 @media (max-width: 768px) {
     .heroImage {
         height: auto;
-        padding: 110px 0 60px;
+        padding: 120px 0 80px;
+        /* Ample space for navbar + content */
     }
 
     .heroContent {
         padding-top: 0;
     }
-}
 
-.title {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-white);
-}
+    .heroContent h1 {
+        font-size: 2.25rem;
+        padding: 0 1rem;
+    }
 
-.subtitle {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #e0e0e0;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    .heroContent p {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+    }
 }

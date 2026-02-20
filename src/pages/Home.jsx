@@ -52,28 +52,28 @@ const Home = () => {
         // Solutions Preview Animation
         gsap.from(`.${styles.solutionPreviewItem}`, {
             scrollTrigger: {
-                trigger: `.${styles.solutionsSection}`, // Trigger on the whole section
-                start: 'top 95%', // Trigger as soon as the section header enters
+                trigger: `.${styles.solutionsPreviewGrid}`, // Trigger when the grid enters
+                start: 'top 85%', // Trigger slightly earlier
                 toggleActions: 'play none none none'
             },
             opacity: 0,
-            y: 30, // Reduced movement for faster feel
-            duration: 0.8, // Faster duration
-            stagger: 0.15, // Snappier stagger
-            ease: 'power3.out',
-            clearProps: "opacity,y,transform"
+            y: 40,
+            duration: 0.6, // Snappier duration
+            stagger: 0.1, // Faster sequence
+            ease: 'power2.out',
+            clearProps: "opacity,transform"
         });
 
         // Features Section Animation
         gsap.from(`.${styles.featureCard}`, {
             scrollTrigger: {
                 trigger: `.${styles.featuresGrid}`,
-                start: 'top 80%',
+                start: 'top 85%',
             },
             opacity: 0,
-            y: 30,
-            duration: 0.8,
-            stagger: 0.15,
+            y: 40,
+            duration: 0.6,
+            stagger: 0.1,
             ease: 'power2.out',
             clearProps: "all"
         });
@@ -81,13 +81,13 @@ const Home = () => {
         // Featured Products Animation
         gsap.from(`.${styles.productCardWrapper}`, {
             scrollTrigger: {
-                trigger: `.${styles.productsSection}`, // Trigger on section for early reveal
-                start: 'top 95%',
+                trigger: `.${styles.productsGrid}`, // Trigger on the grid itself
+                start: 'top 85%',
             },
             y: 40,
             opacity: 0,
-            duration: 0.8,
-            stagger: 0.15,
+            duration: 0.6,
+            stagger: 0.1,
             ease: 'power2.out',
             clearProps: "all"
         });

@@ -1,75 +1,82 @@
 .contactSection {
-    padding: 4rem 0;
-    background-color: var(--color-bg);
+  padding: 6rem 0;
+  background-color: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 6rem 1.5rem;
+  }
 }
 
 .sectionTitle {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: var(--color-text);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-text);
 }
 
 .formContainer {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--color-white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--color-border);
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
 }
 
 .formGroup {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .formGroup label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: var(--color-text);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text);
 }
 
 .formGroup input,
 .formGroup textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    background-color: #f8f9fa;
-    color: var(--color-text);
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #f8f9fa;
+  color: var(--color-text);
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    background-color: var(--color-white);
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
 }
 
 .submitBtn {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .submitBtn:hover {
-    background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-dark);
 }
+
 .otpOverlay {
   position: fixed;
   inset: 0;
@@ -127,6 +134,7 @@
     transform: scale(0.92);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;

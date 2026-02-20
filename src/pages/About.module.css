@@ -28,6 +28,19 @@
 .heroContent {
     position: relative;
     z-index: 1;
+    padding-top: 60px;
+    /* Offset for navbar */
+}
+
+@media (max-width: 768px) {
+    .heroImage {
+        height: auto;
+        padding: 110px 0 60px;
+    }
+
+    .heroContent {
+        padding-top: 0;
+    }
 }
 
 .title {
